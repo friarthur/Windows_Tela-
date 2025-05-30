@@ -5,7 +5,7 @@ require 'conexão.php';
 $nome = $_POST['nome'] ?? '';
 $senha = $_POST['senha'] ?? '';
 
-header('Content-Type: application/json');  // importante definir o tipo de resposta
+header('Content-Type: application/json');  
 
 if ($nome && $senha) {
   $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE nome = ?");
