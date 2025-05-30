@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mod-Up Tecnologias</title>
+  <link rel="stylesheet" href="/frontend/css/index.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <body>
+  <div class="lock-screen" id="lockScreen">
+    <div class="left-bottom" id="infoContainer">
+      <div id="time" class="time">12:00</div>
+      <div id="date" class="date">segunda-feira, 28 de maio</div>
+    </div>
+
+    <div class="bottom-right">
+       <img src="/frontend/img/icons8-wired-network-connection-32 (2).png" alt="">
+    </div>
+  </div>
+
+  <!-- FORA da lock-screen -->
+  <div class="login-container" id="loginContainer">
+  <form class="login-card" id="loginForm" action="/back end/login.php" method="post">
+    <img src="/frontend/img/usuario.png" alt="Usuário" class="user-avatar" />
+    <h3 class="user-name">User</h3>
+    <input type="password" name="senha" placeholder="Senha" required />
+    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+  </form>
+</div>
+
+
+  <script src="/frontend/dist/index.js"></script>
+
+  <script src="/frontend/dist/login.js"></script>
+</body>
+</html>

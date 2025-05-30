@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lock-screen {
+  background-image: url('/frontend/img/tela de bloqueio.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.lock-screen.blurred {
+  filter: brightness(0.2) blur(6px);
+  transition: filter 0.6s ease;
+}
+
+.left-bottom {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 2;
+}
+
+.time {
+  font-size: 140px;
+  font-weight: 200;
+  line-height: 120px;
+}
+
+.date {
+  font-size: 90px;
+  font-weight: 200;
+  margin-top: -40px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  font-size: 20px;
+  color: white;
+  z-index: 2;
+}
+
+/* Login container sobreposto */
+.login-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+   /* sombra leve de fundo */
+  backdrop-filter: blur(5px);     /* efeito Windows 10 */
+}
+
+.login-container.show {
+  display: flex;
+}
+
+.login-card {
+  
+  padding: 50px 40px;
+  border-radius: 16px;
+  
+  text-align: center;
+  width: 320px;
+  animation: fadeIn 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid white;
+}
+
+.user-name {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  color: white;
+}
+
+/* Campo de senha */
+.login-card input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  
+  color: rgb(14, 13, 13);
+  text-align: center;
+}
+
+/* Botão de login */
+.login-card button {
+  
+  border: none;
+  border-radius: 0%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s;
+}
+
+.login-card button:hover {
+  background-color: rgba(82, 81, 81, 0.4);
+}
+
+/* Ícone dentro do botão */
+.login-card button i {
+  font-size: 20px;
+  color:black;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.left-bottom.hidden {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
