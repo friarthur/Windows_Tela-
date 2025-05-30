@@ -23,5 +23,5 @@ Este projeto é uma simulação fiel da **tela de login e desktop do Windows 10*
 - ✅ Menu Iniciar funcional, abrindo e fechando ao clicar no ícone do Windows.
 - ✅ Ícones com links reais para sites como [vscode.dev](https://vscode.dev) e [Google](https://www.google.com).
 
-## 📁 Estrutura do Projeto
+
 
