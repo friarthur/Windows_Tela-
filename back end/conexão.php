@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
 $usuario = 'root';
-$senha = 'admin'; // ajuste se tiver senha
+$senha = 'admin'; 
 $banco = 'login_windows';
 
 try {
